@@ -7,15 +7,21 @@ body {
     background-color: aliceblue;
 }
 
+.buttondiv {
+    display: flex;
+    /* border: 1px solid black; */
+    margin: 50px auto -80px auto;
+}
+
+button {
+    padding: 3px;
+}
+
 .flexcontainer {
     margin: 100px auto;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-}
-
-.button {
-    margin: 0 auto;
 }
 
 .cell {
