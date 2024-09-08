@@ -14,6 +14,9 @@ buttonDiv.appendChild(promptBtn);
 
 promptBtn.addEventListener("click", () => {
     const gridSizeInput = prompt("How many squares per sides would you like?");
+    if (gridSizeInput > 100) {
+        prompt("The inputted number is too high, please input a number lower than or equal to 100.")
+    }
     const newGridRow = gridSizeInput;
     const newGridColumn = gridSizeInput;
     
@@ -48,8 +51,6 @@ container.classList.add("flexcontainer")
 container.style.width = `${gridSize}px`;
 container.style.height = `${gridSize}px`;
 document.body.appendChild(container);
-
-
 
 function createGrid() {
     for (let i = 0; i < (gridRow * gridColumn); i++) {
