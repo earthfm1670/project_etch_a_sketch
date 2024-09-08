@@ -8,6 +8,8 @@ container.style.width = `${gridSize}px`;
 container.style.height = `${gridSize}px`;
 document.body.appendChild(container);
 
+
+
 function createGrid() {
     for (let i = 0; i < (gridRow * gridColumn); i++) {
         const gridCell = document.createElement("div");
@@ -17,6 +19,11 @@ function createGrid() {
         gridCell.classList.add("cell");
 
         container.appendChild(gridCell);
+
+        gridCell.addEventListener("mouseover", () => {
+            gridCell.style.backgroundColor = "red";
+        })
+
     }
 }
 
